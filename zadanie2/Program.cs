@@ -13,6 +13,11 @@ builder.Services.AddHttpClient<SearchService>(client =>
     client.BaseAddress = new Uri("https://rickandmortyapi.com/api/");
 });
 
+builder.Services.AddHttpClient<PairsService>(client =>
+{
+    client.BaseAddress = new Uri("https://rickandmortyapi.com/api/");
+});
+
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
